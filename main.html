@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Attendance System - Project Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 600px;
+            max-height: 700px;
+        }
+        .donut-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        .kpi-card {
+            background-color: #FFFFFF;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .kpi-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #3B82F6;
+        }
+        .kpi-label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4B5563;
+            margin-top: 0.5rem;
+        }
+        .flow-card {
+            background-color: #FFFFFF;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #3B82F6;
+        }
+        .flow-card-student {
+            border-left-color: #14B8A6;
+        }
+        .flow-card-system {
+            border-left-color: #6B7280;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 antialiased">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto max-w-5xl p-6 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">QR Attendance System</h1>
+            <p class="text-lg md:text-xl text-gray-600 mt-2">A Project Infographic: Visualizing the Path from Concept to Reality</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto max-w-5xl p-4 md:p-8">
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-2">Actors & Core Functions</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+                The system is designed around two primary actors, the Teacher and the Student, interacting with a central system to automate attendance.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-center text-gray-800">🧑‍🏫 Teacher</h3>
+                    <div class="flow-card">
+                        <h4 class="font-semibold">Manage Classes/Students</h4>
+                        <p class="text-sm text-gray-600">Administer class lists and student details.</p>
+                    </div>
+                    <div class="flow-card">
+                        <h4 class="font-semibold">Generate QR Code</h4>
+                        <p class="text-sm text-gray-600">Create a unique code for a session.</p>
+                    </div>
+                    <div class="flow-card">
+                        <h4 class="font-semibold">Record Attendance</h4>
+                        <p class="text-sm text-gray-600">Manually override or confirm attendance.</p>
+                    </div>
+                    <div class="flow-card">
+                        <h4 class="font-semibold">Export Reports</h4>
+                        <p class="text-sm text-gray-600">Download attendance data.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-center text-gray-800">⚙️ System</h3>
+                    <div class="flow-card flow-card-system">
+                        <h4 class="font-semibold">Login/Sign up</h4>
+                        <p class="text-sm text-gray-600">Authenticates all users.</p>
+                    </div>
+                    <div class="flow-card flow-card-system">
+                        <h4 class="font-semibold">Process Scans</h4>
+                        <p class="text-sm text-gray-600">Validates QR codes and records data.</p>
+                    </div>
+                    <div class="flow-card flow-card-system">
+                        <h4 class="font-semibold">Store Data</h4>
+                        <p class="text-sm text-gray-600">Securely manages all attendance records.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-center text-gray-800">🧑‍🎓 Student</h3>
+                    <div class="flow-card flow-card-student">
+                        <h4 class="font-semibold">Scan QR Code</h4>
+                        <p class="text-sm text-gray-600">Mark personal attendance instantly.</p>
+                    </div>
+                    <div class="flow-card flow-card-student">
+                        <h4 class="font-semibold">View Personal Attendance</h4>
+                        <p class="text-sm text-gray-600">Check their own attendance history.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-2">Measurable Impact & Quantitative Goals</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+                The primary objective is to dramatically improve efficiency and accuracy. This data highlights the core quantitative outcomes driving the project.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-center mb-4">Attendance Marking Time Reduction</h3>
+                    <div class="donut-container">
+                        <canvas id="timeChart"></canvas>
+                    </div>
+                    <p class="text-center text-gray-600 mt-4">
+                        The system aims to reduce marking time from ~10 minutes to under 1 minute per session, a **90% reduction**.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="kpi-card">
+                        <div class="kpi-number">99%</div>
+                        <div class="kpi-label">Data Accuracy</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-number">100%</div>
+                        <div class="kpi-label">Proxy Elimination</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-number">80%</div>
+                        <div class="kpi-label">Admin Workload Reduction</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-number">50+</div>
+                        <div class="kpi-label">Hours Saved / Month</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-2">Project Feasibility (College Project)</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+                A feasibility study confirmed the project's viability, focusing on leveraging modern, free-tier tools suitable for an academic environment.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2 text-blue-600">💻 Technical</h3>
+                    <p class="text-gray-700">High feasibility using React, TypeScript, and Supabase (free tier). Open-source QR libraries are mature and reliable.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2 text-green-600">👨‍💻 Operational</h3>
+                    <p class="text-gray-700">High usability on existing student/teacher devices (smartphones, laptops). Minimal training required due to intuitive UI.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-600">💰 Economic</h3>
+                    <p class="text-gray-700">$0 development cost (team effort). Minimal recurring cost by using free tiers of Vercel and Supabase. Return is academic.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">⚖️ Legal</h3>
+                    <p class="text-gray-700">Manageable. Focus on data privacy (GDPR principles), secure encryption in Supabase, and obtaining parental consent for minors in any pilot tests.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-2">Project Timeline (10 Weeks)</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+                The project follows a 10-week SDLC model, moving from initial research and design through iterative implementation, testing, and final deployment.
+            </p>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="chart-container">
+                    <canvas id="ganttChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-2">Qualitative Benefits</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+                Beyond the numbers, the system provides significant value by modernizing processes and improving the educational environment.
+            </p>
+            <div class="bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto">
+                <ul class="list-none space-y-3">
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Enhanced transparency in attendance tracking for all parties.
+                    </li>
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Improved student accountability and awareness of their records.
+                    </li>
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Empowered teachers with real-time analytics for data-driven insights.
+                    </li>
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Reduced paper waste, contributing a positive environmental benefit.
+                    </li>
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Modernized institutional image by adopting efficient technology.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 text-gray-500 text-sm">
+        QR Attendance System - Project Infographic SPA
+    </footer>
+
+    <script>
+        window.onload = function() {
+            
+            const mandatoryTooltipConfig = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            function wrapLabel(label, maxWidth) {
+                if (label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    } else {
+                        currentLine += word + ' ';
+                    }
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            }
+
+            const timeCtx = document.getElementById('timeChart');
+            if (timeCtx) {
+                new Chart(timeCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Manual Marking (10 min)', 'QR Marking (<1 min)'],
+                        datasets: [{
+                            data: [90, 10],
+                            backgroundColor: [
+                                '#FCA5A5',
+                                '#3B82F6'
+                            ],
+                            borderColor: [
+                                '#FFFFFF',
+                                '#FFFFFF'
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '70%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                            },
+                            tooltip: mandatoryTooltipConfig.plugins.tooltip
+                        }
+                    }
+                });
+            }
+
+            const ganttCtx = document.getElementById('ganttChart');
+            if (ganttCtx) {
+                const rawLabels = [
+                    "1.1 Assess practicality and sustainability",
+                    "2.1 Identify Functional and Non-Functional Requirements",
+                    "2.2 Define Project Scope, Constraints, and Success Metrics",
+                    "2.3 Prepare Detailed Software Requirements Specification (SRS) Document",
+                    "3.1 Develop Database Schema and Entity-Relationship Diagrams",
+                    "3.2 Create UI/UX Wireframes and Navigation Flows",
+                    "3.3 Design Overall System Architecture (Frontend–Backend Integration, Security Model)",
+                    "4.1 Iteration 1: User Authentication and Role Management Module",
+                    "4.2 Iteration 2: Class and Student Management (CRUD)",
+                    "4.3 Iteration 3: QR Code Generation and Scanning Logic",
+                    "4.4 Iteration 4: Attendance Recording and Database Integration",
+                    "4.5 Iteration 5: Dashboard Development (Teacher/Student Views)",
+                    "4.6 Iteration 6: Reports and Analytics Module",
+                    "5.1 Perform Unit, Integration, and System Testing",
+                    "5.2 Conduct User Acceptance Testing (UAT) with Pilot Users",
+                    "5.3 Carry out Performance, Security, and Reliability Testing",
+                    "6.1 Set up Production Environment and Deploy System (Vercel/Supabase)",
+                    "6.2 Conduct User Training Sessions and Documentation Handover"
+                ];
+
+                const ganttLabels = rawLabels.map(label => wrapLabel(label, 30));
+                
+                const startData = [1, 2, 2, 2, 3, 3, 3, 5, 6, 7, 7, 8, 8, 9, 9, 9, 10, 10].map(d => d - 1);
+                const durationData = [1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1];
+
+                new Chart(ganttCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ganttLabels,
+                        datasets: [
+                            {
+                                label: 'Start Week',
+                                data: startData,
+                                backgroundColor: 'transparent',
+                                barPercentage: 0.6,
+                                categoryPercentage: 0.8
+                            },
+                            {
+                                label: 'Duration (Weeks)',
+                                data: durationData,
+                                backgroundColor: [
+                                    '#3B82F6', '#14B8A6', '#14B8A6', '#14B8A6', '#22C55E', '#22C55E', '#22C55E',
+                                    '#A855F7', '#A855F7', '#A855F7', '#A855F7', '#A855F7', '#A855F7',
+                                    '#EC4899', '#EC4899', '#EC4899', '#F97316', '#F97316'
+                                ],
+                                barPercentage: 0.6,
+                                categoryPercentage: 0.8
+                            }
+                        ]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        stacked: true,
+                        scales: {
+                            x: {
+                                stacked: true,
+                                title: {
+                                    display: true,
+                                    text: 'Week Number'
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + 1;
+                                    }
+                                }
+                            },
+                            y: {
+                                stacked: true
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: function(tooltipItems) {
+                                        const item = tooltipItems[0];
+                                        let label = item.chart.data.labels[item.dataIndex];
+                                        if (Array.isArray(label)) {
+                                          return label.join(' ');
+                                        } else {
+                                          return label;
+                                        }
+                                    },
+                                    label: function(context) {
+                                        if (context.datasetIndex === 1) {
+                                            const duration = context.raw;
+                                            const start = context.chart.data.datasets[0].data[context.dataIndex];
+                                            const end = start + duration;
+                                            return `Duration: ${duration} week(s) (Week ${start + 1} to ${end})`;
+                                        }
+                                        return null;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        };
+    </script>
+</body>
+</html>
