@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HajiriHub - Project Infographic</title>
+    <title>QR Attendance System - Project Infographic Dashboard</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN for visualizations -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Custom Styles to ensure responsive chart containers and font */
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -39,12 +42,12 @@
         .kpi-number {
             font-size: 3rem;
             font-weight: 700;
-            color: #3B82F6;
+            color: #3B82F6; /* Blue-600 */
         }
         .kpi-label {
             font-size: 1rem;
             font-weight: 500;
-            color: #4B5563;
+            color: #4B5563; /* Gray-600 */
             margin-top: 0.5rem;
         }
         .flow-card {
@@ -52,13 +55,13 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             padding: 1rem 1.5rem;
-            border-left: 4px solid #3B82F6;
+            border-left: 4px solid #3B82F6; /* Teacher/Primary */
         }
         .flow-card-student {
-            border-left-color: #14B8A6;
+            border-left-color: #14B8A6; /* Teal-500 */
         }
         .flow-card-system {
-            border-left-color: #6B7280;
+            border-left-color: #6B7280; /* Gray-500 */
         }
     </style>
 </head>
@@ -66,13 +69,14 @@
 
     <header class="bg-white shadow-md">
         <div class="container mx-auto max-w-5xl p-6 text-center">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Hajiri Hub</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">QR Attendance System</h1>
             <p class="text-lg md:text-xl text-gray-600 mt-2">A Project Infographic: Visualizing the Path from Concept to Reality</p>
         </div>
     </header>
 
     <main class="container mx-auto max-w-5xl p-4 md:p-8">
 
+        <!-- Section: Actors & Core Functions -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-center mb-2">Actors & Core Functions</h2>
             <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
@@ -130,6 +134,7 @@
             </div>
         </section>
 
+        <!-- Section: Measurable Impact & Quantitative Goals -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-center mb-2">Measurable Impact & Quantitative Goals</h2>
             <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
@@ -168,6 +173,7 @@
             </div>
         </section>
 
+        <!-- Section: Project Feasibility (College Project) -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-center mb-2">Project Feasibility (College Project)</h2>
             <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
@@ -197,22 +203,157 @@
             </div>
         </section>
 
+        <!-- NEW SECTION: Requirements Analysis Focus (Phase 2) -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-2">Requirements Analysis Focus (Weeks 2-3)</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+                Phase 2, **Requirements**, focuses on defining the exact functionality, scope, and technical documentation needed for development.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-teal-500">
+                    <p class="text-sm font-semibold text-teal-600">Task 2.1</p>
+                    <p class="text-gray-800">Requirements Identification (User Stories, Use Cases)</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-teal-500">
+                    <p class="text-sm font-semibold text-teal-600">Task 2.2</p>
+                    <p class="text-gray-800">Define Scope, Constraints, & Success Metrics</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-teal-500">
+                    <p class="text-sm font-semibold text-teal-600">Task 2.3</p>
+                    <p class="text-gray-800">Prepare Comprehensive SRS (Software Requirements Specification)</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- NEW SECTION: Design & Planning Focus (Phase 3) -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-2">Design & Planning Focus (Weeks 3-4)</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+                Phase 3, **Design**, translates the requirements into blueprints for the database, architecture, and user interface.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-green-500">
+                    <p class="text-sm font-semibold text-green-600">Task 3.1</p>
+                    <p class="text-gray-800">Design Database Schemas & ER Diagrams</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-green-500">
+                    <p class="text-sm font-semibold text-green-600">Task 3.2</p>
+                    <p class="text-gray-800">Create Low-Fidelity UI/UX Wireframes</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-green-500">
+                    <p class="text-sm font-semibold text-green-600">Task 3.3</p>
+                    <p class="text-gray-800">Finalize System Architecture & Component Mapping</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXISTING SECTION: Implementation Iteration Focus (Phase 4) -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-2">Implementation Iteration Focus (Weeks 5-9)</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+                The core development work (Phase 4, highlighted in purple) is broken down into six focused, incremental sprints.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-purple-500">
+                    <p class="text-sm font-semibold text-purple-600">Iteration 1 (4.1)</p>
+                    <p class="text-gray-800">User Authentication & Roles</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-purple-500">
+                    <p class="text-sm font-semibold text-purple-600">Iteration 2 (4.2)</p>
+                    <p class="text-gray-800">Class & Student Management (CRUD)</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-purple-500">
+                    <p class="text-sm font-semibold text-purple-600">Iteration 3 (4.3)</p>
+                    <p class="text-gray-800">QR Code Generation & Scanning</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-purple-500">
+                    <p class="text-sm font-semibold text-purple-600">Iteration 4 (4.4)</p>
+                    <p class="text-gray-800">Attendance Recording & DB Integration</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-purple-500">
+                    <p class="text-sm font-semibold text-purple-600">Iteration 5 (4.5)</p>
+                    <p class="text-gray-800">Dashboard UI Development</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-purple-500">
+                    <p class="text-sm font-semibold text-purple-600">Iteration 6 (4.6)</p>
+                    <p class="text-gray-800">Reports & Analytics Module</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: Quality Assurance Focus (Phase 5) -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-2">Quality Assurance Focus (Weeks 9-10)</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+                Phase 5, **Testing**, ensures the system is robust, meets all requirements, and delivers a great user experience before release.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-pink-500">
+                    <p class="text-sm font-semibold text-pink-600">Task 5.1</p>
+                    <p class="text-gray-800">Unit Testing & System Integration Testing</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-pink-500">
+                    <p class="text-sm font-semibold text-pink-600">Task 5.2</p>
+                    <p class="text-gray-800">User Acceptance Testing (UAT) with Pilot Users</p>
+                </div>
+                <div class="p-4 rounded-lg bg-white shadow-md border-t-4 border-pink-500">
+                    <p class="text-sm font-semibold text-pink-600">Task 5.3</p>
+                    <p class="text-gray-800">Performance, Load, & Security Penetration Testing</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Project Timeline (10 Weeks) -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-center mb-2">Project Timeline (10 Weeks)</h2>
             <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
                 The project follows a 10-week SDLC model, moving from initial research and design through iterative implementation, testing, and final deployment.
             </p>
             <div class="bg-white rounded-lg shadow-md p-6">
+                <!-- Custom Legend for Gantt Chart -->
+                <div id="ganttLegend" class="flex flex-wrap justify-center gap-4 mb-6">
+                    <!-- Legend items will be injected here by JavaScript -->
+                </div>
                 <div class="chart-container">
                     <canvas id="ganttChart"></canvas>
                 </div>
             </div>
         </section>
 
+        <!-- Section: Qualitative Benefits -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-center mb-2">Qualitative Benefits</h2>
             <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">
                 Beyond the numbers, the system provides significant value by modernizing processes and improving the educational environment.
+            </p>
+            <div class="bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto">
+                <ul class="list-none space-y-3">
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Enhanced transparency in attendance tracking for all parties.
+                    </li>
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Improved student accountability and awareness of their records.
+                    </li>
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Empowered teachers with real-time analytics for data-driven insights.
+                    </li>
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Reduced paper waste, contributing a positive environmental benefit.
+                    </li>
+                    <li class="flex items-center text-lg">
+                        <span class="text-green-500 mr-3 text-2xl">✓</span>
+                        Modernized institutional image by adopting efficient technology.
+                    </li>
+                </ul>
+            </div>
             </p>
             <div class="bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto">
                 <ul class="list-none space-y-3">
@@ -243,30 +384,14 @@
     </main>
 
     <footer class="text-center p-6 text-gray-500 text-sm">
-        Hajiri Hub by Reazon Poudel & Nischal Gartaula
+        QR Attendance System - Project Infographic SPA
     </footer>
 
     <script>
         window.onload = function() {
             
-            const mandatoryTooltipConfig = {
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            title: function(tooltipItems) {
-                                const item = tooltipItems[0];
-                                let label = item.chart.data.labels[item.dataIndex];
-                                if (Array.isArray(label)) {
-                                  return label.join(' ');
-                                } else {
-                                  return label;
-                                }
-                            }
-                        }
-                    }
-                }
-            };
-
+            // --- Helper Functions for Chart Labels and Tooltips ---
+            // Function to wrap long Gantt chart labels
             function wrapLabel(label, maxWidth) {
                 if (label.length <= maxWidth) {
                     return label;
@@ -286,6 +411,43 @@
                 return lines;
             }
 
+            // --- 0. Gantt Phase Data for Legend ---
+            const phaseData = [
+                { name: "1. Feasibility", color: '#3B82F6' },
+                { name: "2. Requirements", color: '#14B8A6' },
+                { name: "3. Design", color: '#22C55E' },
+                { name: "4. Implementation (Iterative)", color: '#A855F7' },
+                { name: "5. Testing", color: '#EC4899' },
+                { name: "6. Deployment", color: '#F97316' }
+            ];
+
+            // Function to dynamically generate the Gantt chart legend
+            function createGanttLegend(data) {
+                const legendContainer = document.getElementById('ganttLegend');
+                if (!legendContainer) return;
+
+                data.forEach(phase => {
+                    const item = document.createElement('div');
+                    item.className = 'flex items-center space-x-2 text-sm font-semibold text-gray-800';
+                    
+                    const colorBox = document.createElement('span');
+                    colorBox.className = 'w-4 h-4 rounded-full shadow-md border border-gray-200';
+                    colorBox.style.backgroundColor = phase.color;
+                    
+                    const label = document.createElement('span');
+                    label.textContent = phase.name;
+                    
+                    item.appendChild(colorBox);
+                    item.appendChild(label);
+                    legendContainer.appendChild(item);
+                });
+            }
+
+            // Call the legend creator immediately
+            createGanttLegend(phaseData);
+
+
+            // --- 1. Doughnut Chart (Time Reduction) ---
             const timeCtx = document.getElementById('timeChart');
             if (timeCtx) {
                 new Chart(timeCtx, {
@@ -293,10 +455,10 @@
                     data: {
                         labels: ['Manual Marking (10 min)', 'QR Marking (<1 min)'],
                         datasets: [{
-                            data: [90, 10],
+                            data: [90, 10], // 90% reduction (10 minutes vs 1 minute)
                             backgroundColor: [
-                                '#FCA5A5',
-                                '#3B82F6'
+                                '#FCA5A5', // Light Red/Pink
+                                '#3B82F6'  // Blue (Primary Color)
                             ],
                             borderColor: [
                                 '#FFFFFF',
@@ -313,39 +475,87 @@
                             legend: {
                                 position: 'bottom',
                             },
-                            tooltip: mandatoryTooltipConfig.plugins.tooltip
+                            tooltip: {
+                                // Ensures full label is shown even if wrapped
+                                callbacks: {
+                                    title: function(tooltipItems) {
+                                        let label = tooltipItems[0].label;
+                                        if (Array.isArray(label)) {
+                                            return label.join(' ');
+                                        } else {
+                                            return label;
+                                        }
+                                    }
+                                }
+                            }
                         }
-                    }
+                    },
+                    plugins: [{ // Plugin to add the 90% text in the center
+                        id: 'centerText',
+                        beforeDraw: function(chart) {
+                            const { ctx } = chart;
+                            ctx.save();
+                            const x = chart.getDatasetMeta(0).data[0].x;
+                            const y = chart.getDatasetMeta(0).data[0].y;
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+                            ctx.font = '700 3rem Inter';
+                            ctx.fillStyle = '#3B82F6';
+                            ctx.fillText('90%', x, y - 10);
+                            
+                            ctx.font = '500 1rem Inter';
+                            ctx.fillStyle = '#4B5563';
+                            ctx.fillText('Reduction', x, y + 25);
+                            ctx.restore();
+                        }
+                    }]
                 });
             }
 
+            // --- 2. Gantt Chart (Project Timeline) ---
             const ganttCtx = document.getElementById('ganttChart');
             if (ganttCtx) {
+                // UPDATED Labels
                 const rawLabels = [
-                    "1.1 Assess practicality and sustainability",
-                    "2.1 Identify Functional and Non-Functional Requirements",
-                    "2.2 Define Project Scope, Constraints, and Success Metrics",
-                    "2.3 Prepare Detailed Software Requirements Specification (SRS) Document",
-                    "3.1 Develop Database Schema and Entity-Relationship Diagrams",
-                    "3.2 Create UI/UX Wireframes and Navigation Flows",
-                    "3.3 Design Overall System Architecture (Frontend–Backend Integration, Security Model)",
-                    "4.1 Iteration 1: User Authentication and Role Management Module",
-                    "4.2 Iteration 2: Class and Student Management (CRUD)",
-                    "4.3 Iteration 3: QR Code Generation and Scanning Logic",
-                    "4.4 Iteration 4: Attendance Recording and Database Integration",
-                    "4.5 Iteration 5: Dashboard Development (Teacher/Student Views)",
-                    "4.6 Iteration 6: Reports and Analytics Module",
-                    "5.1 Perform Unit, Integration, and System Testing",
-                    "5.2 Conduct User Acceptance Testing (UAT) with Pilot Users",
-                    "5.3 Carry out Performance, Security, and Reliability Testing",
-                    "6.1 Set up Production Environment and Deploy System (Vercel/Supabase)",
-                    "6.2 Conduct User Training Sessions and Documentation Handover"
+                    "1.1 Feasibility Assessment",
+                    "2.1 Requirements Identification",
+                    "2.2 Define Scope & Metrics",
+                    "2.3 Prepare SRS Document",
+                    "3.1 Design Database & ER Diagrams",
+                    "3.2 Create UI/UX Wireframes",
+                    "3.3 System Architecture Design",
+                    "4.1 User Authentication Module",
+                    "4.2 Class & Student Management",
+                    "4.3 QR Code Generation & Scan",
+                    "4.4 Attendance & DB Integration",
+                    "4.5 Dashboard Development",
+                    "4.6 Reports & Analytics Module",
+                    "5.1 Unit & System Testing",
+                    "5.2 User Acceptance Testing",
+                    "5.3 Performance & Security Testing",
+                    "6.1 Deployment (Vercel/Supabase)",
+                    "6.2 Presentation & Documentation" 
                 ];
 
                 const ganttLabels = rawLabels.map(label => wrapLabel(label, 30));
                 
-                const startData = [1, 2, 2, 2, 3, 3, 3, 5, 6, 7, 7, 8, 8, 9, 9, 9, 10, 10].map(d => d - 1);
+                // Data mapping weeks (1-10) to 0-indexed chart values (0-9)
+                const startData_1_indexed = [1, 2, 2, 2, 3, 3, 3, 5, 6, 7, 7, 8, 8, 9, 9, 9, 10, 10];
+                const startData = startData_1_indexed.map(d => d - 1);
                 const durationData = [1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1];
+
+                // Colors derived from phaseData for legend consistency
+                const phaseColors = phaseData.map(p => p.color);
+                
+                // Map tasks to their phase color
+                const taskColors = [
+                    phaseColors[0], 
+                    phaseColors[1], phaseColors[1], phaseColors[1], 
+                    phaseColors[2], phaseColors[2], phaseColors[2], 
+                    phaseColors[3], phaseColors[3], phaseColors[3], phaseColors[3], phaseColors[3], phaseColors[3], 
+                    phaseColors[4], phaseColors[4], phaseColors[4], 
+                    phaseColors[5], phaseColors[5]
+                ];
 
                 new Chart(ganttCtx, {
                     type: 'bar',
@@ -353,30 +563,26 @@
                         labels: ganttLabels,
                         datasets: [
                             {
-                                label: 'Start Week',
+                                label: 'Start Week (Hidden)',
                                 data: startData,
-                                backgroundColor: 'transparent',
+                                backgroundColor: 'transparent', // Makes the start bar invisible
                                 barPercentage: 0.6,
                                 categoryPercentage: 0.8
                             },
                             {
                                 label: 'Duration (Weeks)',
                                 data: durationData,
-                                backgroundColor: [
-                                    '#3B82F6', '#14B8A6', '#14B8A6', '#14B8A6', '#22C55E', '#22C55E', '#22C55E',
-                                    '#A855F7', '#A855F7', '#A855F7', '#A855F7', '#A855F7', '#A855F7',
-                                    '#EC4899', '#EC4899', '#EC4899', '#F97316', '#F97316'
-                                ],
+                                backgroundColor: taskColors,
                                 barPercentage: 0.6,
                                 categoryPercentage: 0.8
                             }
                         ]
                     },
                     options: {
-                        indexAxis: 'y',
+                        indexAxis: 'y', // Horizontal bars
                         responsive: true,
                         maintainAspectRatio: false,
-                        stacked: true,
+                        stacked: true, // Crucial for Gantt effect
                         scales: {
                             x: {
                                 stacked: true,
@@ -386,9 +592,11 @@
                                 },
                                 ticks: {
                                     callback: function(value) {
-                                        return value + 1;
+                                        return value + 1; // Display 1-10 instead of 0-9
                                     }
-                                }
+                                },
+                                min: 0,
+                                max: 10
                             },
                             y: {
                                 stacked: true
@@ -396,21 +604,18 @@
                         },
                         plugins: {
                             legend: {
-                                display: false
+                                display: false // Hiding default dataset legend, using custom legend
                             },
                             tooltip: {
                                 callbacks: {
+                                    // Show the full task name in the tooltip title
                                     title: function(tooltipItems) {
                                         const item = tooltipItems[0];
-                                        let label = item.chart.data.labels[item.dataIndex];
-                                        if (Array.isArray(label)) {
-                                          return label.join(' ');
-                                        } else {
-                                          return label;
-                                        }
+                                        return rawLabels[item.dataIndex]; // Use the unwrapped original label
                                     },
+                                    // Custom tooltip to show duration and week range
                                     label: function(context) {
-                                        if (context.datasetIndex === 1) {
+                                        if (context.datasetIndex === 1) { // Only for the duration bar
                                             const duration = context.raw;
                                             const start = context.chart.data.datasets[0].data[context.dataIndex];
                                             const end = start + duration;
